@@ -1,0 +1,8 @@
+.tasks_wrapper {
+  background-color: #e5eff7;
+  width: 350px;
+  margin: 5px auto;
+  padding: 25px;
+  border-radius: 3px;
+  box-sizing: 'border-box';
+}
