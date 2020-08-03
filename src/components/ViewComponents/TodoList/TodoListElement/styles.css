@@ -1,8 +1,18 @@
 .task {
+  height: 35px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
   background-color: #249369;
-  width: 300px;
   margin-bottom: 5px;
   border-radius: 3px;
   color: #f5f9fc;
-  padding: 3px 0;
+  padding: 3px 10px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.task_rigth {
+  display: flex;
+  justify-content: space-between;
 }

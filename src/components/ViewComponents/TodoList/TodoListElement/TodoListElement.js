@@ -1,5 +1,10 @@
 import React from 'react';
 import './styles.css';
+import IconButton from '../../../UIElements/Buttons/IconButton/IconButton';
+import IconClose from '../../../../static/images/IconClose';
+import IconEdit from '../../../../static/images/IconEdit';
+import IconTrash from '../../../../static/images/IconTrash';
+import IconSave from '../../../../static/images/IconSave';
 
 const TodoListElement = (props) => {
   const {
@@ -38,16 +43,26 @@ const TodoListElement = (props) => {
           {item.name.length >= 20 ? item.name.slice(0, 17) + '...' : item.name}
         </label>
       )}
-      {changing !== keyValue && (
-        <button onClick={changeTaskName(keyValue)}>{'change name'}</button>
-      )}
-      {changing === keyValue && (
-        <button onClick={changeTaskName(keyValue, 'save')}>{'save'}</button>
-      )}
-      {changing === keyValue && (
-        <button onClick={changeTaskName(keyValue)}>{'discard'}</button>
-      )}
-      <button onClick={deleteTask(item.name)}>{'delete'}</button>
+      <div className="task_rigth">
+        {changing !== keyValue && (
+          <IconButton onClick={changeTaskName(keyValue)}>
+            <IconEdit />
+          </IconButton>
+        )}
+        {changing === keyValue && (
+          <IconButton onClick={changeTaskName(keyValue, 'save')}>
+            <IconSave />
+          </IconButton>
+        )}
+        {changing === keyValue && (
+          <IconButton onClick={changeTaskName(keyValue)}>
+            <IconClose />
+          </IconButton>
+        )}
+        <IconButton onClick={deleteTask(item.name)}>
+          <IconTrash />
+        </IconButton>
+      </div>
     </div>
   );
 };

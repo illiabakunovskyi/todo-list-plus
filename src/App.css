@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+.header {
+  font-family: IBM Plex Sans, Helvetica Neue, Arial, sans-serif;
+}

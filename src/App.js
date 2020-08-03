@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import TodoList from './components/ViewComponents/TodoList/TodoList';
+import './App.css';
 
 const initialTasks = [
   { name: 'large-large-text-too-large' },
@@ -11,13 +11,7 @@ const initialTasks = [
 function App() {
   return (
     <div className="App">
-      <h1
-        style={{
-          fontFamily: 'IBM Plex Sans, Helvetica Neue, Arial, sans-serif',
-        }}
-      >
-        {'Simple todo list with drag and drop'}
-      </h1>
+      <h1 className="header">{'Simple todo list with drag and drop'}</h1>
       <TodoList initialTasks={initialTasks} />
     </div>
   );

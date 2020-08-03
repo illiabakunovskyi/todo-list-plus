@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import TodoListElement from './TodoListElement/TodoListElement';
+import TextButton from '../../UIElements/Buttons/TextButton/TextButton';
+import Input from '../../UIElements/Inputs/Input/Input';
 import './styles.css';
 
 // Dragable features
@@ -37,7 +39,7 @@ const TodoList = ({ initialTasks }) => {
   };
 
   const deleteTask = (name) => () => {
-    console.log(name);
+    setChanging(false);
     setTasks(tasks.filter((task) => task.name !== name));
   };
 
@@ -84,13 +86,13 @@ const TodoList = ({ initialTasks }) => {
 
   return (
     <>
-      <input
-        type="text"
+      <Input
+        type={'text'}
         placeholder={'Enter name of task...'}
         value={input}
         onChange={(event) => setInput(event.target.value)}
       />
-      <button onClick={addTask}>{'Add task'}</button>
+      <TextButton onClick={addTask} label={'Add task'} />
       <div className="tasks_wrapper">
         {tasks.map((item, key) => {
           return (
