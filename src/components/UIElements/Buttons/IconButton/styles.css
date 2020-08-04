@@ -1,3 +1,9 @@
 .icon_button {
-  
+  height: 24px;
+  background-color: #e5eff7;
+  border: none;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 4px 6px;
+  box-sizing: border-box;
 }

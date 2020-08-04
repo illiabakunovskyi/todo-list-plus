@@ -91,6 +91,7 @@ const TodoList = ({ initialTasks }) => {
         placeholder={'Enter name of task...'}
         value={input}
         onChange={(event) => setInput(event.target.value)}
+        style={{ width: '200px' }}
       />
       <TextButton onClick={addTask} label={'Add task'} />
       <div className="tasks_wrapper">

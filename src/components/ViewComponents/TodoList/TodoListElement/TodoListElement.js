@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import Input from '../../../UIElements/Inputs/Input/Input';
 import IconButton from '../../../UIElements/Buttons/IconButton/IconButton';
 import IconClose from '../../../../static/images/IconClose';
 import IconEdit from '../../../../static/images/IconEdit';
@@ -32,7 +33,7 @@ const TodoListElement = (props) => {
       key={keyValue}
     >
       {changing === keyValue ? (
-        <input
+        <Input
           value={taskInput}
           onChange={(event) => setTaskInput(event.target.value)}
           onKeyDown={handleKeyDown}
@@ -40,7 +41,7 @@ const TodoListElement = (props) => {
         />
       ) : (
         <label>
-          {item.name.length >= 20 ? item.name.slice(0, 17) + '...' : item.name}
+          {item.name.length >= 36 ? item.name.slice(0, 34) + '...' : item.name}
         </label>
       )}
       <div className="task_rigth">

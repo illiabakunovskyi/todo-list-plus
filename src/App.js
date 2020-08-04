@@ -3,7 +3,7 @@ import TodoList from './components/ViewComponents/TodoList/TodoList';
 import './App.css';
 
 const initialTasks = [
-  { name: 'large-large-text-too-large' },
+  { name: 'large-large-text-too-large-large-large-large' },
   { name: '2' },
   { name: '4' },
 ];
